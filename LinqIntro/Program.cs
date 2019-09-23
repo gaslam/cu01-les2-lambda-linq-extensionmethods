@@ -17,14 +17,14 @@ namespace LinqIntro
 
             //met linq
             var BooksWithC = romans.Where(b => b.Title.Contains("C"));
-
+            
             foreach (var book in BooksWithC)
             {
                 Console.WriteLine(book.Title);
             }
         }
 
-        //Ander voorbeeld (referentie steek je in BooksWithC
+        //Ander voorbeeld (referentie steek je in BooksWithC)
         static bool FilterWithC(Book book)
         {
             return book.Title.Contains("C");

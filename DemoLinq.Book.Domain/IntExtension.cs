@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DemoLinq.Book.Domain
 {
-    public class IntExtension
+    public static class IntExtension
     {
     }
 }

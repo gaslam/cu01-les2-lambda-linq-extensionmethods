@@ -16,11 +16,7 @@ namespace LinqIntro
             var romans = bookRepository.GetProgramming();
 
             //met linq
-            var BooksWithC = romans.Where(delegate(Book book)
-            {
-                return book.Title.Contains("P");
-            }
-            );
+            var BooksWithC = romans.Where(b => b.Title.Contains("C"));
 
             foreach (var book in BooksWithC)
             {

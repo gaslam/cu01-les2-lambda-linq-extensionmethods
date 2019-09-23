@@ -12,7 +12,26 @@ namespace LinqIntro
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Book repository app");
+            BookRepository bookRepository = new BookRepository();
+            var romans = bookRepository.GetProgramming();
+
+            //met linq
+            var BooksWithC = romans.Where(delegate(Book book)
+            {
+                return book.Title.Contains("P");
+            }
+            );
+
+            foreach (var book in BooksWithC)
+            {
+                Console.WriteLine(book.Title);
+            }
+        }
+
+        //Ander voorbeeld (referentie steek je in BooksWithC
+        static bool FilterWithC(Book book)
+        {
+            return book.Title.Contains("C");
         }
 
         

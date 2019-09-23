@@ -22,14 +22,30 @@ namespace LinqIntro
             {
                 Console.WriteLine(book.Title);
             }
+
+            int getal = 4;
+            var result = getal.DivideByTwo();
+            Console.WriteLine($"Resultaat: {result}");
+
+            Worker worker = new Worker();
+            worker.DoWork();
+            while(!worker.WorkDone)
+            {
+                Console.Write("*");
+                Thread.Sleep(100);
+            }
         }
 
-        //Ander voorbeeld (referentie steek je in BooksWithC)
+        //Ander filter voorbeeld (referentie steek je in BooksWithC)
         static bool FilterWithC(Book book)
         {
             return book.Title.Contains("C");
         }
 
+        static async void Telop()
+        {
+
+        }
         
     }
 }
